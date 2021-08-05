@@ -1,10 +1,10 @@
 import React from 'react'
 import './Photo.css'
 
-function Photo({photo}) {
+function Photo({photo, handleClick}) {
     return (
-        <div className="photo">
-            <img src={photo.urls.thumb} alt={photo.alt_description} />
+        <div onClick={() => handleClick(photo)} className="photo">
+            <img src={photo.urls?.thumb} alt={photo.alt_description} />
         </div>
     )
 }

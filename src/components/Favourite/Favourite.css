@@ -1,0 +1,11 @@
+
+.favourite button {
+    margin-bottom: 1rem;
+    background-color: coral;
+    margin: 1rem;
+    color: white
+}
+.favourite button:hover {
+    background-color: white;
+    color: coral;
+}

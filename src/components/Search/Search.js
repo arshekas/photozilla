@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import SearchIcon from '@material-ui/icons/Search';
 import './Search.css'
 import NativeSelect from '@material-ui/core/NativeSelect';
+import {DebounceInput} from 'react-debounce-input';
 
 
 function Search({ search, handleSearch, handleOrientation, handleColor}) {
@@ -9,7 +10,9 @@ function Search({ search, handleSearch, handleOrientation, handleColor}) {
     return (
         <div className="searchBar">
             <div className="search">
-                <input
+                <DebounceInput
+                    minLength={3}
+                    debounceTimeout={100}
                     placeholder="Search"
                     value={search}
                     onChange={handleSearch}

@@ -29,3 +29,6 @@
 .header a:hover, .header .logo:hover {
     color: black;
 }
+.header .MuiSvgIcon-root {
+    font-size: 3rem;
+}

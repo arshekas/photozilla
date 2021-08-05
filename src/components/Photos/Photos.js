@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import Masonry from 'react-masonry-component';
 import { addPhotos } from '../../redux/actions';
-import Photo from '../Photo/Photo'
 import axios from 'axios'
 import './Photos.css'
+import MasonryImages from '../../shared/MasonryImages';
 
 function Photos({search, orientation, color}) {
 
     const dispatch = useDispatch();
     const photos = useSelector(state => state.photos)
     const API_KEY = process.env.REACT_APP_API_KEY;
-    console.log(orientation)
+    const [current, setCurrent] = useState(null)
+    console.log(photos)
 
     useEffect( () => {
         const fetchPhotos = async () => {
@@ -25,53 +25,19 @@ function Photos({search, orientation, color}) {
             }
             catch(error)
             {
+                console.log(error.message)
             }
         }        
-        if(search !== "")
+        if(search !== "" && search.trim() !== "")
         {
             fetchPhotos()
         }
     }, [search, orientation, color])
 
-
-    // useEffect(() => {
-    //     if(!photos.length)
-    //     {
-    //         const firstFetch = async () => {
-    //             try {
-    //                 const result = await axios.get(`${BASE_URL}/photos?per_page=30`, {
-    //                     headers: {
-    //                         "Authorization": "Client-ID " + API_KEY ,
-    //                     }
-    //                 })
-    //                 console.log(result.data)
-    //                 dispatch(addPhotos(result.data))
-    //             }
-    //             catch(error)
-    //             {
-    //                 console.log(error)
-    //             }
-    //         }
-    //         firstFetch()
-    //     }
-    // }, [])
-
     return (
-        <div className="photos">
-            {console.log(photos)}
-            <Masonry options={{ isFitWidth: true }}>
-                {   
-                    (photos.length 
-                    ?
-                        photos.map(photo => 
-                            <Photo key={photo.id} photo={photo} />
-                        )
-                    :
-                    ""
-                    )
-                }
-            </Masonry>
-        </div>
+                <div className="photos">
+                    <MasonryImages current={current} setCurrent={setCurrent} photos={photos} />
+                </div>
     )
 }
 

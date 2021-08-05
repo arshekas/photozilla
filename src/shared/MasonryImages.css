@@ -1,0 +1,42 @@
+.details  {
+    text-align: center;
+}
+
+.details b {
+    color: coral;
+}
+.description {
+    text-align: center;
+}
+
+.user_image img {
+    width: 80px !important;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+}
+
+.details button {
+    margin-bottom: 1rem;
+    background-color: coral;
+}
+.details button:hover {
+    background-color: white;
+    color: coral;
+}
+
+.details img {
+    width: 500px;
+}
+
+.no-images {
+    width: 100%;
+    margin: auto;
+    margin-top: 2rem;
+    color: coral;
+}
+.img-preview
+{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}

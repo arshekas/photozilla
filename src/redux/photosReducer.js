@@ -1,8 +1,9 @@
-import { ADD_PHOTOS, HIDE_LOADER, SHOW_LOADER } from "./constants";
-
+import Photo from "../components/Photo/Photo";
+import { ADD_PHOTOS, ADD_TO_FAVOURITE, CLEAR_FAVOURITE, REMOVE_FROM_FAVOURITE } from "./constants";
 const initialState = {
     loading: false,
-    photos: []
+    photos: [],
+    favourites: [],
 }
 
 function photosReducer(state = initialState, action) {
@@ -12,15 +13,30 @@ function photosReducer(state = initialState, action) {
                 ...state,
                 photos: action.payload,
             }
-        case SHOW_LOADER:
-            return {
-                ...state,
-                loading: true
+        case ADD_TO_FAVOURITE:
+            const found = state.favourites.filter(favourite => favourite.id === action.payload.id)
+            if(found.length)
+            {
+                return {
+                    ...state
+                }
             }
-        case HIDE_LOADER:
+            else {
+                return {
+                    ...state,
+                    favourites: [...state.favourites, action.payload]
+                }   
+            }
+        case REMOVE_FROM_FAVOURITE: 
+        const filtered = state.favourites.filter(favourite => favourite.id !== action.payload.id)
             return {
                 ...state,
-                loading: false
+                favourites: filtered
+            }
+        case CLEAR_FAVOURITE:
+            return {
+                ...state,
+                favourites: []
             }
         default:
             return state;
