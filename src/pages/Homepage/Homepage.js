@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Filters from '../../components/Filters/Filters'
 import Photos from '../../components/Photos/Photos'
 import Search from '../../components/Search/Search'
 

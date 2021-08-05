@@ -19,8 +19,9 @@ function Docs() {
                 <ListGroup.Item as="li"><b>React Routing for home, favourites and docs</b></ListGroup.Item>
                 <ListGroup.Item as="li"><b>Deployment</b> using Heroku</ListGroup.Item>
                 <ListGroup.Item as="li"><b>React Masonry Component</b> for photos</ListGroup.Item>
+                <ListGroup.Item as="li"><b>Debouncing Input</b> while searching for photos</ListGroup.Item>
                 <ListGroup.Item as="li"><b>Material UI Icons</b></ListGroup.Item>
-                <ListGroup.Item as="li"><b>React-bootstrap</b></ListGroup.Item>
+                <ListGroup.Item as="li"><b>React-bootstrap...</b></ListGroup.Item>
             </ListGroup>
             <ListGroup as="ul">
             <ListGroup.Item className="list-heading"as="li" active>

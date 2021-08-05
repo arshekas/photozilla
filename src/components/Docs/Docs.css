@@ -2,12 +2,15 @@
     text-align: left;
     width: 80%;
     margin: auto;
+    margin-bottom: 1rem;
 }
 .list-heading {
     color: whitesmoke !important; 
     text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
     background-color: coral !important; 
-    border: none;
+    border: none !important;
 }
 .docs a {
     color: coral;
@@ -15,8 +18,4 @@
 
 .docs ul {
     margin-top: 1rem;
-}
-
-.docs b {
-    color: coral;
 }

@@ -31,7 +31,7 @@
 .no-images {
     width: 100%;
     margin: auto;
-    margin-top: 2rem;
+    padding-top: 2rem;
     color: coral;
 }
 .img-preview
