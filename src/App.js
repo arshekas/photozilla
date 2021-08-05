@@ -1,11 +1,9 @@
 import './App.css';
-import Search from './components/Search/Search';
-import Photos from './components/Photos/Photos';
-import { useState } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Header from './components/Header/Header';
 import Favourite from './components/Favourite/Favourite';
 import Homepage from './pages/Homepage/Homepage';
+import Docs from './components/Docs/Docs';
 
 
 function App() {
@@ -16,6 +14,7 @@ function App() {
           <Header />
           <Route exact path="/" component={Homepage} />
           <Route exact path="/favourite" component={Favourite} />
+          <Route exact path="/docs" component={Docs} />
         </Router>
     </div>
   );

@@ -9,9 +9,10 @@ function Header() {
             <Link className="logo" to="/">PhotoZilla</Link>
             <div className="category">
                 <Link to="/favourite"><FavoriteIcon /></Link>
+                <Link to="/docs">Docs</Link>
             </div>
         </div>
     )
 }
 
-export default Header
+export default Header;
