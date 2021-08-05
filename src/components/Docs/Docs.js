@@ -3,7 +3,9 @@ import React from 'react'
 function Docs() {
     return (
         <div>
-            Docs
+            <ul>
+                <li>Hello</li>
+            </ul>
         </div>
     )
 }
