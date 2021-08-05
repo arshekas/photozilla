@@ -18,7 +18,7 @@ function Photos({search, orientation, color}) {
             try {
                 const result = await axios.get(`https://api.unsplash.com/search/photos?query=${search}&orientation=${orientation}&color=${color}&per_page=80`, {
                     headers: {
-                        "Authorization": "Client-ID hMTUT5nByURkkOVaJa7Mm-cFk9GXyCWK52p-096jo4U",
+                        "Authorization": "Client-ID " + API_KEY,
                     }
                 })
                 dispatch(addPhotos(result.data.results))
