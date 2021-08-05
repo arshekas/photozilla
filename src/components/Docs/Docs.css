@@ -1,0 +1,22 @@
+.docs {
+    text-align: left;
+    width: 80%;
+    margin: auto;
+}
+.list-heading {
+    color: whitesmoke !important; 
+    text-align: center;
+    background-color: coral !important; 
+    border: none;
+}
+.docs a {
+    color: coral;
+}
+
+.docs ul {
+    margin-top: 1rem;
+}
+
+.docs b {
+    color: coral;
+}

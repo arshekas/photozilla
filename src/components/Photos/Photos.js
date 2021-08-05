@@ -11,8 +11,7 @@ function Photos({search, orientation, color}) {
     const photos = useSelector(state => state.photos)
     const API_KEY = process.env.REACT_APP_API_KEY;
     const [current, setCurrent] = useState(null)
-    console.log(photos)
-
+    
     useEffect( () => {
         const fetchPhotos = async () => {
             try {

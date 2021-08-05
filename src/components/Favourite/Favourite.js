@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Button from '@material-ui/core/Button';
 import MasonryImages from '../../shared/MasonryImages';
-import { addToFavourite, clearFavourites } from '../../redux/actions';
+import { clearFavourites } from '../../redux/actions';
 import './Favourite.css'
 function Favourite() {
 

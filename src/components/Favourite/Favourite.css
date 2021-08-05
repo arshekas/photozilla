@@ -1,4 +1,7 @@
-
+.favourite {
+    background-color: whitesmoke;
+    height: 100vh;
+}
 .favourite button {
     margin-bottom: 1rem;
     background-color: coral;
